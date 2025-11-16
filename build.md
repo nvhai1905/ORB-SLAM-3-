@@ -1,5 +1,16 @@
 # Hướng dẫn Build ORB-SLAM3 trên Ubuntu 20.04
 
+## Giới thiệu
+ORB-SLAM là một hệ thống Visual SLAM (Simultaneous Localization and Mapping bằng camera) sử dụng điểm đặc trưng ORB (Oriented FAST + Rotated BRIEF).
+
+Mục tiêu của SLAM là trong khi di chuyển, hệ thống vừa xác định vị trí (localization) vừa xây dựng bản đồ (mapping) của môi trường.
+
+ORB-SLAM nổi bật vì là hệ thống mã nguồn mở, hiệu quả, dùng “feature-based” (dựa vào việc phát hiện và theo dõi các đặc trưng hình ảnh) và có khả năng loop closure (phát hiện khi nó quay lại vị trí đã đi qua) để giảm lỗi tích lũy. Một hệ thống ORB-SLAM thường có các module chạy song song:
+
+Tracking (Theo dõi vị trí Local Mapping (Bản đồ cục bộ) Loop Closing & Global Optimization Relocalization (Phục hồi khi mất theo dõi)
+
+ORB-SLAM3 mạnh mẽ hơn 2 vì có thể có thêm IMU, hoạt động trong những môi trường phức tạp hơn, Có thể tạo nhiều bản đồ khi bị mất tracking, rồi tự động gộp lại khi quay về khu vực cũ.Chính xác hơn ORB-SLAM2 từ 2–5 lần trên nhiều bộ dữ liệu.
+
 ## Tổng quan
 Hướng dẫn này giúp bạn cài đặt ORB-SLAM3 trên Ubuntu 20.04 từ đầu, bao gồm các lỗi thường gặp và cách khắc phục.
 
